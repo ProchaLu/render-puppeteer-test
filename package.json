@@ -6,7 +6,13 @@
   "repository": "https://github.com/ProchaLu/render-puppeteer-test.git",
   "author": "Lukas Prochazka <prochazka.lu@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "puppeteer": "node -e \"console.log(require.resolve('puppeteer'))\"",
+    "chromium": "node -e \"console.log(require('puppeteer').executablePath())\"",
+    "revisionInfo": "node -e \"console.log(require('puppeteer').revisionInfo())\"",
+    "all": "yarn puppeteer && yarn chromium && yarn revisionInfo"
+  },
   "dependencies": {
-    "puppeteer": "^19.7.1"
+    "puppeteer": "^19.7.0"
   }
 }
