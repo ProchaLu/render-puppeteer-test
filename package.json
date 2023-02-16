@@ -1,0 +1,12 @@
+{
+  "name": "render-puppeteer-test",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "repository": "https://github.com/ProchaLu/render-puppeteer-test.git",
+  "author": "Lukas Prochazka <prochazka.lu@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^19.7.1"
+  }
+}
