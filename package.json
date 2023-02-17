@@ -7,8 +7,11 @@
   "author": "Lukas Prochazka <prochazka.lu@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "chromium": "bash chromium_path.sh",
-    "find": "yarn chromium"
+    "puppeteer": "find / -type f -name 'puppeteer'",
+    "chromium": "find / -type f -name 'chromium-browser'",
+    "chrome": "find / -type f -name 'chromium' 2>/dev/null || echo 'Chromium not found'",
+    "path": "echo $PATH",
+    "find": "yarn puppeteer && yarn chromium && yarn chrome && yarn path"
   },
   "dependencies": {
     "puppeteer": "19.7.1"
