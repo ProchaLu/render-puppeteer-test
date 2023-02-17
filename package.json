@@ -7,7 +7,7 @@
   "author": "Lukas Prochazka <prochazka.lu@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "chromium": "echo find / -type f -name 'chromium' -print -quit 2>/dev/null",
+    "chromium": "find / -type d -name 'chromium' -print -quit 2>/dev/null",
     "find": "yarn chromium"
   },
   "dependencies": {
