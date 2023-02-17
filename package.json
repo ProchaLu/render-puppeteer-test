@@ -6,10 +6,6 @@
   "repository": "https://github.com/ProchaLu/render-puppeteer-test.git",
   "author": "Lukas Prochazka <prochazka.lu@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "chromium": "find / -type d -name 'chromium' -print -quit 2>/dev/null",
-    "find": "yarn chromium"
-  },
   "dependencies": {
     "puppeteer": "19.7.1"
   }
