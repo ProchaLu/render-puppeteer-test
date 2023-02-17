@@ -7,9 +7,8 @@
   "author": "Lukas Prochazka <prochazka.lu@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "chromium": "sudo find / -type d -name 'chromium'",
-    "puppeteer": "sudo find / -type d -name 'puppeteer'",
-    "find": "yarn chromium && yarn puppeteer"
+    "chromium": "which chromium-browser",
+    "find": "yarn chromium"
   },
   "dependencies": {
     "puppeteer": "19.7.1"
