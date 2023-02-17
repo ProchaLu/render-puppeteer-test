@@ -7,7 +7,7 @@
   "author": "Lukas Prochazka <prochazka.lu@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "chromium": "echo $(which chromium-browser)",
+    "chromium": "locate chromium | grep -E \"/chromium(-browser)?(/[^/]*)?$\"",
     "find": "yarn chromium"
   },
   "dependencies": {
