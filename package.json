@@ -10,6 +10,6 @@
     "puppeteer": "19.7.1"
   },
   "scripts": {
-    "chrome": "node -e \"console.log(require('puppeteer').executablePath())\""
+    "chrome": "puppeteer_path=$(node -e \"console.log(require('puppeteer').executablePath())\"); if [ -e \"$puppeteer_path\" ]; then echo \"Chromium is installed at $puppeteer_path\"; else echo \"Chromium is not installed\"; fi"
   }
 }
