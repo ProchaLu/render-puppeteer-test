@@ -10,6 +10,6 @@
     "puppeteer": "19.7.1"
   },
   "scripts": {
-    "chrome": "find / -type f -name 'chromium' 2>/dev/null || echo 'Chromium not found'"
+    "chrome": "sudo find / -type d -name 'chromium'"
   }
 }
