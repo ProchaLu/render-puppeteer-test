@@ -10,6 +10,6 @@
     "puppeteer": "19.7.1"
   },
   "scripts": {
-    "chrome": "find / -type d -name 'chromium'"
+    "chrome": "node -e \"console.log(require('puppeteer').executablePath())\""
   }
 }
