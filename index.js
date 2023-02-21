@@ -1,9 +1,8 @@
 import { launch } from 'puppeteer';
 
 (async () => {
-  const browser = await launch({
-    executablePath:
-      '/opt/render/.cache/puppeteer/chrome/linux-1095492/chrome-linux/chrome',
+  const browser = await puppeteer.launch({
+    executablePath: '~/.cache/puppeteer',
   });
   const page = await browser.newPage();
   await page.goto('https://example.com');
