@@ -2,7 +2,7 @@ import { launch } from 'puppeteer';
 
 (async () => {
   const browser = await puppeteer.launch({
-    executablePath: '/.cache/puppeteer',
+    executablePath: '/opt/render/.cache/puppeteer',
   });
   const page = await browser.newPage();
   await page.goto('https://example.com');
