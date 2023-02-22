@@ -1,7 +1,5 @@
 (async () => {
-  const browser = await puppeteer.launch({
-    executablePath: '$HOME/.cache/puppeteer',
-  });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('https://example.com');
 
