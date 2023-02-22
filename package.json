@@ -10,6 +10,6 @@
     "puppeteer": "^19.7.2"
   },
   "scripts": {
-    "chrome": "test -f /opt/render/.cache/puppeteer/chrome/linux-1095492/chrome-linux/chrome && echo \"File exists.\" || echo \"File does not exist.\""
+    "chrome": "node -e \"console.log(require('puppeteer').executablePath())\" && echo \"File exists.\" || echo \"File does not exist.\""
   }
 }
