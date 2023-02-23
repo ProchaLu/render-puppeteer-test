@@ -1,13 +1,29 @@
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 console.log('__dirname:', __dirname);
 
-const path = require('path');
-const puppeteerPath = require.resolve('puppeteer');
-const absolutePath = path.resolve(puppeteerPath);
-console.log('Absolute path to Puppeteer:', absolutePath);
+fs.readdir(__dirname, (err, files) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  console.log(`Contents of ${__dirname}:`);
+  console.log(files);
+});
+
+fs.readdir('/opt/render/project/src/.puppeteer', (err, files) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  console.log(`Contents of puppeteer:`);
+  console.log(files);
+});
 
 // (async () => {
 //   const browser = await puppeteer.launch();
