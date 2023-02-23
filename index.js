@@ -1,10 +1,12 @@
-(async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.goto('https://example.com');
+console.log('__dirname:', __dirname);
 
-  const title = await page.title();
-  console.log(`Page title: ${title}`);
+// (async () => {
+//   const browser = await puppeteer.launch();
+//   const page = await browser.newPage();
+//   await page.goto('https://example.com');
 
-  await browser.close();
-})();
+//   const title = await page.title();
+//   console.log(`Page title: ${title}`);
+
+//   await browser.close();
+// })();
