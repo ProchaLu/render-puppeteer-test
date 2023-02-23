@@ -23,7 +23,7 @@ fs.readdir(
       return;
     }
 
-    console.log(`Contents of puppeteer chrome folder:`);
+    console.log(`Contents of puppeteer:`);
     console.log(files);
   },
 );
