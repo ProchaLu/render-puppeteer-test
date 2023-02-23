@@ -1,3 +1,4 @@
+import { exec } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -21,9 +22,42 @@ fs.readdir('/opt/render/project/src/.cache', (err, files) => {
     return;
   }
 
-  console.log(`Contents of puppeteer:`);
+  console.log(`Contents of .cache:`);
   console.log(files);
 });
+
+function findChromePath() {
+  return new Promise((resolve, reject) => {
+    let command;
+    if (process.platform === 'win32') {
+      command = 'where chrome';
+    } else {
+      command = 'which google-chrome || which chromium-browser';
+    }
+    exec(command, (error, stdout, stderr) => {
+      if (error) {
+        reject(error);
+      } else if (stderr) {
+        reject(stderr);
+      } else {
+        const path = stdout.trim();
+        if (path) {
+          resolve(path);
+        } else {
+          reject('Chrome or Chromium not found.');
+        }
+      }
+    });
+  });
+}
+
+findChromePath()
+  .then((chromePath) => {
+    console.log(`Chrome or Chromium is installed at: ${chromePath}`);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 
 // (async () => {
 //   const browser = await puppeteer.launch();
