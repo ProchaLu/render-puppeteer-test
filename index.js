@@ -16,48 +16,18 @@ fs.readdir(__dirname, (err, files) => {
   console.log(files);
 });
 
-fs.readdir('/opt/render/project/src/.cache', (err, files) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-
-  console.log(`Contents of .cache:`);
-  console.log(files);
-});
-
-function findChromePath() {
-  return new Promise((resolve, reject) => {
-    let command;
-    if (process.platform === 'win32') {
-      command = 'where chrome';
-    } else {
-      command = 'which google-chrome || which chromium-browser';
+fs.readdir(
+  '/opt/render/project/src/.cache/puppeteer/chrome/linux-1095492/chrome-linux/chrome',
+  (err, files) => {
+    if (err) {
+      console.error(err);
+      return;
     }
-    exec(command, (error, stdout, stderr) => {
-      if (error) {
-        reject(error);
-      } else if (stderr) {
-        reject(stderr);
-      } else {
-        const path = stdout.trim();
-        if (path) {
-          resolve(path);
-        } else {
-          reject('Chrome or Chromium not found.');
-        }
-      }
-    });
-  });
-}
 
-findChromePath()
-  .then((chromePath) => {
-    console.log(`Chrome or Chromium is installed at: ${chromePath}`);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
+    console.log(`Contents of puppeteer chrome folder:`);
+    console.log(files);
+  },
+);
 
 // (async () => {
 //   const browser = await puppeteer.launch();
