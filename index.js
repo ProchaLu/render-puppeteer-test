@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 
-try {
+(async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('https://example.com');
@@ -9,6 +9,4 @@ try {
   console.log(`Page title: ${title}`);
 
   await browser.close();
-} catch (err) {
-  console.error(err);
-}
+})();
