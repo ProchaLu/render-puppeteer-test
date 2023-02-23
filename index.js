@@ -15,7 +15,7 @@ fs.readdir(__dirname, (err, files) => {
   console.log(files);
 });
 
-fs.readdir('/opt/render/project/src/.puppeteer', (err, files) => {
+fs.readdir('/opt/render/project/src/.cache', (err, files) => {
   if (err) {
     console.error(err);
     return;
