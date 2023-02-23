@@ -16,7 +16,7 @@ fs.readdir(__dirname, (err, files) => {
 });
 
 fs.readdir(
-  '/opt/render/project/src/.cache/puppeteer/chrome/linux-1095492/chrome-linux/chrome',
+  '/opt/render/project/src/.cache/puppeteer/chrome/linux-1095492/chrome-linux/',
   (err, files) => {
     if (err) {
       console.error(err);
